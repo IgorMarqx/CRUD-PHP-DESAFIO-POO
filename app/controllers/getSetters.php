@@ -25,7 +25,7 @@ class getSetters
 
     public function setEmail($email)
     {
-        $this->name = $email;
+        $this->email = $email;
     }
 
     public function getCpf()
