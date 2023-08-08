@@ -28,6 +28,9 @@ class User
 
     public function read()
     {
-        
+    }
+
+    public function update()
+    {
     }
 }
