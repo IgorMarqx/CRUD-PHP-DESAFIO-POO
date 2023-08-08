@@ -1,6 +1,7 @@
 <?php
 require_once 'getSettersController.php';
 require_once '../models/db.php';
+require_once '../models/User.php';
 
 class create
 {
@@ -25,18 +26,10 @@ class create
         $this->telephone = filter_input(INPUT_POST, 'telephone', FILTER_DEFAULT);
         $this->birthdate = filter_input(INPUT_POST, 'birthdate', FILTER_DEFAULT);
 
-        $query = "INSERT INTO clientes (name, email, cpf, telephone,birthdate) VALUES (?,?,?,?,?)";
-        $insert = $this->pdo->prepare($query);
-        $insert->bindValue(1, $this->name);
-        $insert->bindValue(2, $this->email);
-        $insert->bindValue(3, $this->cpf);
-        $insert->bindValue(4, $this->telephone);
-        $insert->bindValue(5, $this->birthdate);
-        $insert->execute();
+        $user = new User($this->pdo);
+        $user->insert($this->name, $this->email, $this->cpf, $this->telephone, $this->birthdate);
 
-
-        $array = $this->gets();
-        return $array;
+        return;
     }
 
     public function gets()
@@ -67,6 +60,7 @@ class create
     }
 }
 
-$instance = new create($pdo);
-
-var_dump($instance->store());
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $instance = new create($pdo);
+    $instance->store();
+}
