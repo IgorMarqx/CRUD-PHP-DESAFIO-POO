@@ -25,4 +25,9 @@ class User
             echo $e->getMessage();
         }
     }
+
+    public function read()
+    {
+        
+    }
 }
