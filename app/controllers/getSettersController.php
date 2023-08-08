@@ -54,7 +54,7 @@ class getSetters
     }
 
     public function setBirthdate($birthdate)
-    {  
+    {
         $this->birthdate = $birthdate;
     }
 }
