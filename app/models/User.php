@@ -26,9 +26,14 @@ class User
         }
     }
 
-    public function read($name, $email, $cpf, $telephone, $birthdate)
+    public function read()
     {
-        $query = "UPDATE clientes SET name = $name, email = $email, cpf = $cpf, telephone = $telephone, birthdate = $birthdate";
+      
+    }
+
+    public function update($id, $name, $email, $cpf, $telephone, $birthdate)
+    {
+        $query = "UPDATE clientes SET name = $name, email = $email, cpf = $cpf, telephone = $telephone, birthdate = $birthdate WHERE id = $id";
         $update = $this->pdo->prepare($query);
         $update->bindValue('name', $name);
         $update->bindValue('email', $email);
@@ -41,10 +46,6 @@ class User
         }catch(PDOException $e){
             echo $e->getMessage();
         }
-    }
-
-    public function update($id)
-    {
     }
 
     public function delete($id)
