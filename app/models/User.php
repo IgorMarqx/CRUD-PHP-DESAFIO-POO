@@ -28,6 +28,7 @@ class User
 
     public function read($name, $email, $cpf, $telephone, $birthdate)
     {
+        $query = "UPDATE clientes SET name = $name, email = $email, cpf = $cpf, telephone = $telephone, birthdate = $birthdate";
     }
 
     public function update($id)
