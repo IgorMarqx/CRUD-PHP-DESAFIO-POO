@@ -5,4 +5,10 @@ require_once '../models/User.php';
 
 class update
 {
+    private $pdo;
+
+    public function __construct(PDO $pdo)
+    {
+        return $this->pdo = $pdo;
+    }
 }
