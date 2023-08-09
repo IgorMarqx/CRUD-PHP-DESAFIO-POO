@@ -51,5 +51,7 @@ class User
 
     public function delete($id)
     {
+        $query = "DELETE FROM clientes WHERE id = $id";
+        
     }
 }
