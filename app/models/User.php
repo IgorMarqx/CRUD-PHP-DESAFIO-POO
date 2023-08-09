@@ -34,7 +34,7 @@ class User
     {
     }
 
-    public function delete()
+    public function delete($id)
     {
     }
 }
