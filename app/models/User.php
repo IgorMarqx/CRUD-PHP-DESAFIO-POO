@@ -26,7 +26,7 @@ class User
         }
     }
 
-    public function read()
+    public function read($name, $email, $cpf, $telephone, $birthdate)
     {
     }
 
