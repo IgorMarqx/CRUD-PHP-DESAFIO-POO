@@ -35,6 +35,12 @@ class User
         $update->bindValue('cpf', $cpf);
         $update->bindValue('telephone', $telephone);
         $update->bindValue('birthdate', $birthdate);
+
+        try{
+            $update->execute();
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
     }
 
     public function update($id)
