@@ -40,6 +40,7 @@ class User
         $update->bindValue('cpf', $cpf);
         $update->bindValue('telephone', $telephone);
         $update->bindValue('birthdate', $birthdate);
+        $update->bindValue('id', $id);
 
         try{
             $update->execute();
