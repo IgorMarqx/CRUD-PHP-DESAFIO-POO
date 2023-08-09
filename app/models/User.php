@@ -30,7 +30,7 @@ class User
     {
     }
 
-    public function update()
+    public function update($id)
     {
     }
 
