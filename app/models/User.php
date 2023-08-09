@@ -30,6 +30,11 @@ class User
     {
         $query = "UPDATE clientes SET name = $name, email = $email, cpf = $cpf, telephone = $telephone, birthdate = $birthdate";
         $update = $this->pdo->prepare($query);
+        $update->bindValue('name', $name);
+        $update->bindValue('email', $email);
+        $update->bindValue('cpf', $cpf);
+        $update->bindValue('telephone', $telephone);
+        $update->bindValue('birthdate', $birthdate);
     }
 
     public function update($id)
