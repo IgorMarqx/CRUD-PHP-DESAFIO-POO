@@ -5,6 +5,12 @@ require_once '../models/User.php';
 
 class update
 {
+    private $name;
+    private $email;
+    private $cpf;
+    private $telephone;
+    private $birthdate;
+
     private $pdo;
 
     public function __construct(PDO $pdo)
