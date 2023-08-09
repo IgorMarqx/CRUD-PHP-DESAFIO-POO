@@ -11,4 +11,8 @@ class update
     {
         return $this->pdo = $pdo;
     }
+
+    public function edit()
+    {
+    }
 }
