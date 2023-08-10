@@ -13,4 +13,8 @@ class delete
 
     private $pdo;
 
+    public function __construct(PDO $pdo)
+    {
+        return $this->pdo = $pdo;
+    }
 }
