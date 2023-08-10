@@ -51,7 +51,7 @@ class User
 
     public function delete($id)
     {
-        $query = "DELETE FROM clientes WHERE id = $id";
+        $query = "DELETE FROM clientes WHERE id = :id";
         $delete = $this->pdo->prepare($query);
         $delete->bindValue('id', $id);
         $delete->execute();
