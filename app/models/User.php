@@ -58,6 +58,11 @@ class User
         $query = "DELETE FROM clientes WHERE id = :id";
         $delete = $this->pdo->prepare($query);
         $delete->bindValue(':id', $id);
-        $delete->execute();
+
+        try{
+            $delete->execute();
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
     }
 }
