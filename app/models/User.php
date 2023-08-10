@@ -30,7 +30,12 @@ class User
     {
       $query = "SELECT * FROM clientes";
       $read = $this->pdo->prepare($query);
-      $read->execute();
+
+      try{
+        $read->execute();
+      }catch(PDOException $e){
+        echo $e->getMessage();
+      }
 
       return $read->fetchAll(PDO::FETCH_ASSOC);
     }
