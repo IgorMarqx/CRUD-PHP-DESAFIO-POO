@@ -35,12 +35,12 @@ class User
     {
         $query = "UPDATE clientes SET name = :name, email = :email, cpf = :cpf, telephone = :telephone, birthdate = :birthdate WHERE id = :id";
         $update = $this->pdo->prepare($query);
-        $update->bindValue('name', $name);
-        $update->bindValue('email', $email);
-        $update->bindValue('cpf', $cpf);
-        $update->bindValue('telephone', $telephone);
-        $update->bindValue('birthdate', $birthdate);
-        $update->bindValue('id', $id);
+        $update->bindValue(':name', $name);
+        $update->bindValue(':email', $email);
+        $update->bindValue(':cpf', $cpf);
+        $update->bindValue(':telephone', $telephone);
+        $update->bindValue(':birthdate', $birthdate);
+        $update->bindValue(':id', $id);
 
         try{
             $update->execute();
