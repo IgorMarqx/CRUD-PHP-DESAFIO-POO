@@ -33,7 +33,7 @@ class User
 
     public function update($id, $name, $email, $cpf, $telephone, $birthdate)
     {
-        $query = "UPDATE clientes SET name = $name, email = $email, cpf = $cpf, telephone = $telephone, birthdate = $birthdate WHERE id = $id";
+        $query = "UPDATE clientes SET name = :name, email = :email, cpf = :cpf, telephone = :telephone, birthdate = :birthdate WHERE id = :id";
         $update = $this->pdo->prepare($query);
         $update->bindValue('name', $name);
         $update->bindValue('email', $email);
