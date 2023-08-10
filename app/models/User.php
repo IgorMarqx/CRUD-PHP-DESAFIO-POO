@@ -28,16 +28,16 @@ class User
 
     public function read()
     {
-      $query = "SELECT * FROM clientes";
-      $read = $this->pdo->prepare($query);
+        $query = "SELECT * FROM clientes";
+        $read = $this->pdo->prepare($query);
 
-      try{
-        $read->execute();
-      }catch(PDOException $e){
-        echo $e->getMessage();
-      }
+        try {
+            $read->execute();
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
 
-      return $read->fetchAll(PDO::FETCH_ASSOC);
+        return $read->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function update($id, $name, $email, $cpf, $telephone, $birthdate)
@@ -51,9 +51,9 @@ class User
         $update->bindValue(':birthdate', $birthdate);
         $update->bindValue(':id', $id);
 
-        try{
+        try {
             $update->execute();
-        }catch(PDOException $e){
+        } catch (PDOException $e) {
             echo $e->getMessage();
         }
     }
@@ -64,9 +64,9 @@ class User
         $delete = $this->pdo->prepare($query);
         $delete->bindValue(':id', $id);
 
-        try{
+        try {
             $delete->execute();
-        }catch(PDOException $e){
+        } catch (PDOException $e) {
             echo $e->getMessage();
         }
     }
