@@ -28,7 +28,7 @@ class User
 
     public function read()
     {
-      
+      $query = "SELECT * FROM clientes";
     }
 
     public function update($id, $name, $email, $cpf, $telephone, $birthdate)
