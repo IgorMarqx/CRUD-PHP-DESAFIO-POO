@@ -30,6 +30,7 @@ class User
     {
       $query = "SELECT * FROM clientes";
       $read = $this->pdo->prepare($query);
+      $read->execute();
     }
 
     public function update($id, $name, $email, $cpf, $telephone, $birthdate)
