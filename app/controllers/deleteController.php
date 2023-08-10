@@ -11,4 +11,6 @@ class delete
     private $telephone;
     private $birthdate;
 
+    private $pdo;
+
 }
