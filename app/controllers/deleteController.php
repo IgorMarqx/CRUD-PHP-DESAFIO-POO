@@ -17,4 +17,8 @@ class delete
     {
         return $this->pdo = $pdo;
     }
+
+    public function delete($id)
+    {
+    }
 }
