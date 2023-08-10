@@ -53,7 +53,7 @@ class User
     {
         $query = "DELETE FROM clientes WHERE id = :id";
         $delete = $this->pdo->prepare($query);
-        $delete->bindValue('id', $id);
+        $delete->bindValue(':id', $id);
         $delete->execute();
     }
 }
