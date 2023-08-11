@@ -45,6 +45,7 @@ class User
         $query = 'SELECT * FROM clientes WHERE id = :id';
         $edit = $this->pdo->prepare($query);
         $edit->bindValue(':id', $id); 
+        $edit->execute();
     }
 
     public function update($id, $name, $email, $cpf, $telephone, $birthdate)
