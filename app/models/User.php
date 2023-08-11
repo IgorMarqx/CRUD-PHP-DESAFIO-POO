@@ -46,6 +46,8 @@ class User
         $edit = $this->pdo->prepare($query);
         $edit->bindValue(':id', $id); 
         $edit->execute();
+
+        return $edit;
     }
 
     public function update($id, $name, $email, $cpf, $telephone, $birthdate)
