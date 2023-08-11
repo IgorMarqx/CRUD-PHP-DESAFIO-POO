@@ -23,5 +23,6 @@ class update
         $this->name = filter_input(INPUT_POST, 'name', FILTER_DEFAULT);
         $this->email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $this->cpf = filter_input(INPUT_POST, 'cpf', FILTER_DEFAULT);
+        $this->telephone = filter_input(INPUT_POST, 'telephone', FILTER_DEFAULT);
     }
 }
