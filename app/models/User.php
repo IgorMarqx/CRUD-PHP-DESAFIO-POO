@@ -43,6 +43,7 @@ class User
     public function edit($id)
     {
         $query = 'SELECT * FROM clientes WHERE id = :id';
+        $edit = $this->pdo->prepare($query); 
     }
 
     public function update($id, $name, $email, $cpf, $telephone, $birthdate)
