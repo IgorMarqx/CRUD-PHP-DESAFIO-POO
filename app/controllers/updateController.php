@@ -20,8 +20,11 @@ class update
 
     public function edit(int $id)
     {
-        if()
         $id = $_GET['id'];
+        if(!$id){
+            header('location: ../../');
+            return;
+        }
         
         $this->name = filter_input(INPUT_POST, 'name', FILTER_DEFAULT);
         $this->email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
