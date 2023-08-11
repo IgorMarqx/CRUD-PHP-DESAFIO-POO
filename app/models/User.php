@@ -40,6 +40,10 @@ class User
         return $read->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function edit($id)
+    {
+    }
+
     public function update($id, $name, $email, $cpf, $telephone, $birthdate)
     {
         $query = "UPDATE clientes SET name = :name, email = :email, cpf = :cpf, telephone = :telephone, birthdate = :birthdate WHERE id = :id";
