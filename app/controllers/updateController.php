@@ -18,7 +18,7 @@ class update
         return $this->pdo = $pdo;
     }
 
-    public function edit()
+    public function edit($id)
     {
     }
 }
