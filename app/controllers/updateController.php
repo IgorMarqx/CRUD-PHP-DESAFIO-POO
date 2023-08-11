@@ -18,12 +18,15 @@ class update
         return $this->pdo = $pdo;
     }
 
-    public function edit($id)
+    public function update($id)
     {
         $this->name = filter_input(INPUT_POST, 'name', FILTER_DEFAULT);
         $this->email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $this->cpf = filter_input(INPUT_POST, 'cpf', FILTER_DEFAULT);
         $this->telephone = filter_input(INPUT_POST, 'telephone', FILTER_DEFAULT);
         $this->birthdate = filter_input(INPUT_POST, 'birthdate', FILTER_DEFAULT);
+
+        $edit = new User($this->pdo);
+        $edit->edit();
     }
 }
