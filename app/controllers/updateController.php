@@ -21,6 +21,7 @@ class update
     public function edit($id)
     {
         $this->name = filter_input(INPUT_POST, 'name', FILTER_DEFAULT);
+        $this->email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $this->email = filter_input(INPUT_POST, 'email', FILTER_DEFAULT);
     }
 }
