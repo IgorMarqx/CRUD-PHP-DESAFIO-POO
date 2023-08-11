@@ -33,6 +33,6 @@ class update
         $this->birthdate = filter_input(INPUT_POST, 'birthdate', FILTER_DEFAULT);
 
         $edit = new User($this->pdo);
-        $edit->edit();
+        $edit->edit($id);
     }
 }
