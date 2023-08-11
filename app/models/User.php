@@ -45,7 +45,12 @@ class User
         $query = 'SELECT * FROM clientes WHERE id = :id';
         $edit = $this->pdo->prepare($query);
         $edit->bindValue(':id', $id); 
-        $edit->execute();
+        
+        try {
+            $edit->execute();
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
 
         return $edit;
     }
