@@ -18,8 +18,11 @@ class update
         return $this->pdo = $pdo;
     }
 
-    public function edit($id)
+    public function edit(int $id)
     {
+        if()
+        $id = $_GET['id'];
+        
         $this->name = filter_input(INPUT_POST, 'name', FILTER_DEFAULT);
         $this->email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $this->cpf = filter_input(INPUT_POST, 'cpf', FILTER_DEFAULT);
