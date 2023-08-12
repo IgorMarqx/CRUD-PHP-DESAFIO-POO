@@ -38,5 +38,6 @@ class update
 
     public function gets()
     {
+        $getSetters = new getSetters();
     }
 }
