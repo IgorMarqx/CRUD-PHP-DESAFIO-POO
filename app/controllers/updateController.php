@@ -21,11 +21,11 @@ class update
     public function edit(int $id)
     {
         $id = $_GET['id'];
-        if(!$id){
+        if (!$id) {
             header('location: ../../');
             return;
         }
-        
+
         $this->name = filter_input(INPUT_POST, 'name', FILTER_DEFAULT);
         $this->email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $this->cpf = filter_input(INPUT_POST, 'cpf', FILTER_DEFAULT);
@@ -34,5 +34,9 @@ class update
 
         $edit = new User($this->pdo);
         $edit->edit($id);
+    }
+
+    public function gets()
+    {
     }
 }
