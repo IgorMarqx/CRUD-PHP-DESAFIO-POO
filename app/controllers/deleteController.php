@@ -20,5 +20,14 @@ class delete
 
     public function delete($id)
     {
+        $id = filter_input(INPUT_GET, 'id', FILTER_DEFAULT);
+
+        if(!$id){
+            header('Location: ../../');
+            return;
+        }
+
+        $delete = new User($this->pdo);
+        $delete->delete($id);
     }
 }
