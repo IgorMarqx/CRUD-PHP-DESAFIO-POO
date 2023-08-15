@@ -51,5 +51,9 @@ class update
         $cpf = $getSetters->getCpf();
         $telephone = $getSetters->getTelephone();
         $birthdate = $getSetters->getBirthdate();
+
+        $array = [
+            'name' => $name,
+        ];
     }
 }
