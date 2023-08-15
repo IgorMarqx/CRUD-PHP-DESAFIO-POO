@@ -55,6 +55,7 @@ class update
         $array = [
             'name' => $name,
             'email' => $email,
+            'cpf' => $cpf,
         ];
     }
 }
