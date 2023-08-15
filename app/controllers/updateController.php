@@ -41,6 +41,6 @@ class update
         $getSetters = new getSetters();
 
         $getSetters->setName($this->name);
-        $getSetters->setEmail()
+        $getSetters->setEmail($this->email);
     }
 }
