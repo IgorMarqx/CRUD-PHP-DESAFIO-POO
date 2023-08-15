@@ -39,5 +39,7 @@ class update
     public function gets()
     {
         $getSetters = new getSetters();
+
+        $getSetters->setName($this->name);
     }
 }
