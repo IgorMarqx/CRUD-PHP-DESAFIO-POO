@@ -47,5 +47,6 @@ class update
         $getSetters->setBirthdate($this->birthdate);
 
         $name = $getSetters->getName();
+        $email = $getSetters->getEmail();
     }
 }
