@@ -50,5 +50,6 @@ class update
         $email = $getSetters->getEmail();
         $cpf = $getSetters->getCpf();
         $telephone = $getSetters->getTelephone();
+        $birthdate = $getSetters->getBirthdate();
     }
 }
