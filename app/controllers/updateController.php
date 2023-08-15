@@ -20,7 +20,7 @@ class update
 
     public function edit(int $id)
     {
-        $id = intval(filter_input());
+        $id = intval(filter_input(INPUT_GET, 'id', FILTER_DEFAULT));
         if (!$id) {
             header('location: ../../');
             return;
