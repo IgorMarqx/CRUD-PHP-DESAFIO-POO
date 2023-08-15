@@ -26,5 +26,7 @@ class delete
             header('Location: ../../');
             return;
         }
+
+        $delete = new User($this->pdo);
     }
 }
