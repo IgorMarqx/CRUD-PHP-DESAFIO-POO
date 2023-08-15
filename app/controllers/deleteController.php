@@ -24,6 +24,7 @@ class delete
 
         if(!$id){
             header('Location: ../../');
+            return;
         }
     }
 }
