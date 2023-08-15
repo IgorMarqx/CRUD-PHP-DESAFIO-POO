@@ -57,6 +57,7 @@ class update
             'email' => $email,
             'cpf' => $cpf,
             'telephone' => $telephone,
+            'birthdate' => $birthdate
         ];
     }
 }
