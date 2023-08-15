@@ -56,6 +56,7 @@ class update
             'name' => $name,
             'email' => $email,
             'cpf' => $cpf,
+            'telephone' => $telephone,
         ];
     }
 }
