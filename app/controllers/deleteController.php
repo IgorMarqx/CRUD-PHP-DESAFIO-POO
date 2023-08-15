@@ -22,8 +22,8 @@ class delete
     {
         $id = filter_input(INPUT_GET, 'id', FILTER_DEFAULT);
 
-        if($id){
-            
+        if(!$id){
+            header('Location: ../../');
         }
     }
 }
