@@ -59,5 +59,7 @@ class update
             'telephone' => $telephone,
             'birthdate' => $birthdate
         ];
+
+        return $array;
     }
 }
