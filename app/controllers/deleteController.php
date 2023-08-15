@@ -28,6 +28,6 @@ class delete
         }
 
         $delete = new User($this->pdo);
-        $delete->delete();
+        $delete->delete($id);
     }
 }
