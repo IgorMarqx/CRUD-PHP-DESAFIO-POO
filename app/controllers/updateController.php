@@ -43,5 +43,6 @@ class update
         $getSetters->setName($this->name);
         $getSetters->setEmail($this->email);
         $getSetters->setCpf($this->cpf);
+        $getSetters->setTelephone($this->telephone);
     }
 }
